@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# Serverless function API rewrite for Authorize.Net payment endpoint
+[[redirects]]
+  from = "/api/donate"
+  to = "/.netlify/functions/donate"
+  status = 200
+  force = true
+
+# SPA fallback rule for Vite single page application routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
