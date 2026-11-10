@@ -1,0 +1,20 @@
+# Environment variables & secrets
+.env
+.env.local
+.env.production
+.env.*
+
+# Dependencies
+node_modules/
+
+# Build outputs (Netlify will run npm run build)
+dist/
+build/
+.next/
+
+# Local Netlify cache and CLI state
+.netlify/
+
+# Logs & temp files
+*.log
+.DS_Store
