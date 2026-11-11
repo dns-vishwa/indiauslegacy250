@@ -40,6 +40,10 @@ dist-ssr/
 # Large source documents
 *.docx
 
+# Large audio/video files (transfer separately via pendrive/drive)
+/public/music.mp3
+*.mp3
+
 # ------------------------------------------------------------------
 # Local-only assets (kept on disk, NOT pushed to GitHub).
 # Transfer these separately - see LOCAL_ASSETS.md

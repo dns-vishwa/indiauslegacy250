@@ -2,7 +2,7 @@
 These files are intentionally git-ignored. They are **not needed to build or run the website**, but they are originals/source material you may want on another computer.
 Copy them manually (USB drive, external disk, Google Drive / OneDrive folder, etc.) into the same relative location inside the cloned project folder.
 
-**Total: 124 files, 774.5 MB**
+**Total: 125 files, 780.7 MB**
 
 > `QR-Poster-Text.docx` (~645 MB) exceeds GitHub's 100 MB per-file limit and can never be pushed to a normal GitHub repo.
 
@@ -16,6 +16,7 @@ Copy them manually (USB drive, external disk, Google Drive / OneDrive folder, et
 | `High Quality Images/` | 8 | 41.44 |
 | `_local_originals/` | 12 | 33.12 |
 | `LOGO_REDESIGNED_DNS_#345_X_GRAPHICS (1).png` | 1 | 6.37 |
+| `public/` | 1 | 6.23 |
 | `Updated_Banner_for_DNS_#445.png` | 1 | 5.43 |
 | `HARSH VARDHAN SHRINGLA.pdf` | 1 | 3.69 |
 | `extracted_page_img_0.png` | 1 | 3.57 |
@@ -51,6 +52,7 @@ Copy them manually (USB drive, external disk, Google Drive / OneDrive folder, et
 | 6.52 | `High Quality Images/legacy_old.png` |
 | 6.52 | `High Quality Images/Legacy_NEW_LOGO.png` |
 | 6.37 | `LOGO_REDESIGNED_DNS_#345_X_GRAPHICS (1).png` |
+| 6.23 | `public/music.mp3` |
 | 5.43 | `Updated_Banner_for_DNS_#445.png` |
 | 5.39 | `_local_originals/public/assets/INUS.png` |
 | 5.39 | `_local_originals/public/assets/Banner.png` |
