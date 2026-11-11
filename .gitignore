@@ -39,3 +39,47 @@ dist-ssr/
 
 # Large source documents
 *.docx
+
+# ------------------------------------------------------------------
+# Local-only assets (kept on disk, NOT pushed to GitHub).
+# Transfer these separately - see LOCAL_ASSETS.md
+# ------------------------------------------------------------------
+
+# Design-source / original media folders (not used by the Vite build)
+/High Quality Images/
+/New updates/
+/Glimpses of Chicago/
+/forms/
+
+# Unreferenced original PNGs moved out of public/ (site uses .webp twins)
+/_local_originals/
+
+# Loose design files in the project root (website assets live in public/)
+/*.png
+/*.jpg
+/*.jpeg
+/*.pdf
+/*.zip
+
+# Temporary extraction folders
+/temp_state/
+/temp_student/
+temp/
+tmp/
+*.tmp
+
+# Local helper scripts for chunked pushing (not part of the website)
+/push_all_assets.py
+/smart_push.py
+/smart_uploader_v2.py
+/upload_batch.py
+
+# Caches
+.cache/
+.eslintcache
+.vite/
+node_modules/.vite/
+*.tsbuildinfo
+__pycache__/
+Thumbs.db
+desktop.ini
