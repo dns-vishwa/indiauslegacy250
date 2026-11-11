@@ -44,6 +44,9 @@ dist-ssr/
 /public/music.mp3
 *.mp3
 
+# Pendrive transfer staging folder
+/Put in pendrive/
+
 # ------------------------------------------------------------------
 # Local-only assets (kept on disk, NOT pushed to GitHub).
 # Transfer these separately - see LOCAL_ASSETS.md
