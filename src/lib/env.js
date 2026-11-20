@@ -7,8 +7,8 @@ import { z } from 'zod';
 // ─────────────────────────────────────────────────────────────────────
 const clientEnvSchema = z.object({
   AUTHORIZENET_ENV: z.enum(['sandbox', 'production']).default('production'),
-  NEXT_PUBLIC_AUTHORIZENET_API_LOGIN_ID: z.string().min(1),
-  NEXT_PUBLIC_AUTHORIZENET_CLIENT_KEY: z.string().min(1),
+  NEXT_PUBLIC_AUTHORIZENET_API_LOGIN_ID: z.string().default(''),
+  NEXT_PUBLIC_AUTHORIZENET_CLIENT_KEY: z.string().default(''),
 });
 
 const getEnvVal = (key) => {

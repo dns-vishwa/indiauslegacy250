@@ -63,7 +63,6 @@ import { AmbassadorForm } from "./components/AmbassadorForm";
 import { StateAmbassadorForm } from "./components/StateAmbassadorForm";
 import { StudentAmbassadorForm } from "./components/StudentAmbassadorForm";
 import { VintageTheater } from "./components/VintageTheater";
-import { DonateView } from "./components/DonateView";
 import { PosterDetailView } from "./components/PosterDetailView";
 import { findPosterBySlug } from "./data/postersData";
 
@@ -4190,14 +4189,6 @@ const HomeView = ({ scrollTo, navigateTo }) => {
                   </p>
                 </div>
 
-                <div className="pt-6 pb-2 flex justify-center text-center">
-                  <button
-                    onClick={() => navigateTo && navigateTo("donate")}
-                    className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-400 text-black font-bold font-inter text-xs uppercase tracking-[0.2em] rounded-xl transition-all shadow-[0_0_25px_rgba(245,158,11,0.35)] cursor-pointer transform hover:scale-[1.02] border border-amber-400/40"
-                  >
-                    <Heart className="w-4 h-4 fill-current" /> Donate to Support Legacy 250
-                  </button>
-                </div>
                 <InteractiveStats />
               </FadeIn>
             </div>
@@ -4428,7 +4419,6 @@ const App = () => {
       "community",
       "advisors",
       "images",
-      "donate",
     ];
     if (path && validViews.includes(path)) {
       return path;
@@ -4658,8 +4648,6 @@ const App = () => {
         return <StudentAmbassadorForm />;
       case "images":
         return <ImagesView />;
-      case "donate":
-        return <DonateView navigateTo={navigateTo} />;
       default: {
         const matchedPoster = findPosterBySlug(view);
         if (matchedPoster) {
@@ -4776,12 +4764,6 @@ const App = () => {
               active={view === "faq"}
             />
             <button
-              onClick={() => navigateTo("donate")}
-              className={`ml-4 px-6 py-2.5 rounded-sm transition-all duration-300 font-inter text-[11px] uppercase tracking-widest font-bold flex items-center gap-2 cursor-pointer shadow-[0_0_20px_rgba(245,158,11,0.4)] transform hover:scale-105 ${view === "donate" ? "bg-amber-400 text-black shadow-[0_0_25px_rgba(245,158,11,0.7)]" : "bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-black hover:brightness-110"}`}
-            >
-              <Heart className="w-4 h-4 fill-current" /> Donate
-            </button>
-            <button
               onClick={toggleAudio}
               className={`p-3 rounded-full border transition-all duration-300 hover:scale-110 ${scrolled || view !== "home" ? "border-white/10 text-white hover:text-amber-500" : "border-white/20 text-white hover:bg-white/10"}`}
             >
@@ -4791,21 +4773,6 @@ const App = () => {
 
           {/* Mobile Nav Controls */}
           <div className="md:hidden flex items-center gap-3">
-            {/* Standalone Top Mobile Donate Button */}
-            <button
-              onClick={() => {
-                if (isMenuOpen) setIsMenuOpen(false);
-                navigateTo("donate");
-              }}
-              className={`px-3.5 py-1.5 rounded-full transition-all duration-300 font-inter text-[11px] uppercase tracking-widest font-bold flex items-center gap-1.5 shadow-[0_0_15px_rgba(245,158,11,0.4)] cursor-pointer ${
-                view === "donate"
-                  ? "bg-amber-400 text-black shadow-[0_0_20px_rgba(245,158,11,0.7)]"
-                  : "bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-black hover:brightness-110"
-              }`}
-            >
-              <Heart className="w-3.5 h-3.5 fill-current" /> Donate
-            </button>
-
             {/* Audio Button - Kept visible outside menu */}
             <button
               onClick={toggleAudio}
@@ -4885,15 +4852,6 @@ const App = () => {
             >
               Press Info
             </button>
-
-            <div className="pt-6 border-t border-white/10 mt-6 w-full">
-              <button
-                onClick={() => { setIsMenuOpen(false); navigateTo("donate"); }}
-                className="w-full py-3.5 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-black font-bold uppercase tracking-[0.25em] font-inter text-xs rounded-xl shadow-[0_0_25px_rgba(245,158,11,0.5)] flex items-center justify-center gap-2 cursor-pointer border border-amber-400/40"
-              >
-                <Heart className="w-4 h-4 fill-current" /> Donate Now
-              </button>
-            </div>
           </div>
         </div>
       )}

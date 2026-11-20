@@ -12,7 +12,6 @@ import {
   History
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { DonationSection } from "./DonationSection";
 
 export const DonateView = ({ navigateTo }) => {
   const [expandedFaq, setExpandedFaq] = React.useState(null);
@@ -119,14 +118,28 @@ export const DonateView = ({ navigateTo }) => {
             </div>
           </div>
 
-          {/* CUSTOM EMBEDDED DONATION INTERFACE MATCHING INDIAUSLEGACY250.COM */}
+          {/* DONATION CONTACT NOTICE */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="my-8"
+            className="my-8 max-w-2xl mx-auto bg-[#0f172a]/80 backdrop-blur-xl border border-amber-500/30 rounded-2xl p-8 text-center shadow-2xl"
           >
-            <DonationSection />
+            <div className="w-12 h-12 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center mx-auto mb-4 text-amber-400">
+              <Heart className="w-6 h-6" />
+            </div>
+            <h2 className="font-playfair text-2xl font-bold text-white mb-2">
+              Contribute to Legacy 250
+            </h2>
+            <p className="font-lora text-slate-300 text-sm md:text-base mb-5 leading-relaxed">
+              Online card processing is currently disabled. To make a contribution or sponsorship inquiry, please reach out to Mass India Partnership directly.
+            </p>
+            <a
+              href="mailto:info@indiauslegacy250.com?subject=Legacy%20250%20Contribution%20Inquiry"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-inter font-semibold text-sm transition-colors"
+            >
+              Contact info@indiauslegacy250.com
+            </a>
           </motion.div>
         </div>
 
