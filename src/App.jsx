@@ -3743,7 +3743,8 @@ const ImagesView = () => {
 
 const InstitutionsView = () => {
   const museumPartners = [
-    { name: "Art Institute of Chicago", url: "https://www.artic.edu/" },
+    { name: "The Art Institute of Chicago", url: "https://www.artic.edu/" },
+    { name: "Concord Museum", url: "https://concordmuseum.org/" },
     { name: "Indian Museum, Kolkata, India", url: "https://indianmuseumkolkata.org/" }
   ];
 
@@ -3764,10 +3765,13 @@ const InstitutionsView = () => {
                   href={museum.url} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="font-lora text-sm text-slate-400 hover:text-amber-500 flex items-center justify-between group transition-colors"
+                  className="font-lora text-sm text-slate-400 hover:text-amber-500 flex flex-wrap items-center justify-between gap-2 group transition-colors"
                 >
                   <span>{museum.name}</span>
-                  <ExternalLink className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <span className="flex items-center gap-2 text-xs text-amber-500/80 group-hover:text-amber-400 font-inter">
+                    <span>{museum.url}</span>
+                    <ExternalLink className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity shrink-0" />
+                  </span>
                 </a>
               ))}
             </div>

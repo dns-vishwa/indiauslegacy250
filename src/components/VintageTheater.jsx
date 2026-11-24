@@ -11,7 +11,7 @@ export const VintageTheater = () => {
   const videos = {
     launch: {
       id: "kg3jH6Bnw8A",
-      title: "MassIndia Partnership Launches Legacy 250 Initiative",
+      title: "Launch of Legacy 250 Initiative",
       subtitle: "Official Launch Video",
       embedUrl: "https://www.youtube.com/embed/kg3jH6Bnw8A?autoplay=1&mute=1&rel=0",
     },
@@ -73,7 +73,7 @@ export const VintageTheater = () => {
         {/* Title Header */}
         <div className="text-center mb-10 relative">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-500 font-inter text-[10px] tracking-[0.25em] uppercase mb-4 shadow-sm">
-            <Sparkles className="w-3 h-3 animate-pulse" /> MassIndia Partnership • Legacy 250 Videos
+            <Sparkles className="w-3 h-3 animate-pulse" /> Legacy 250 Videos
           </div>
           
           <h2 className="font-playfair text-3xl md:text-5xl font-bold tracking-tight text-white mb-4 relative drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
@@ -97,7 +97,7 @@ export const VintageTheater = () => {
                   : "bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10"
               }`}
             >
-              1. MassIndia Legacy 250 Launch
+              1. Legacy 250 Launch
             </button>
             <button
               onClick={() => {
